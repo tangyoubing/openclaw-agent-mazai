@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "tencent-channel-community": {
+      "name": "腾讯频道Skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tencent-channel-community",
+      "source": "skillhub",
+      "version": "1.1.4"
+    }
+  }
+}

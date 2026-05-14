@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+*~
+
+# Node modules (if any)
+node_modules/
+
+# Environment variables
+.env
+.<vaitvar>
+
+# Large files or binaries
+*.zip
+*.tar.gz
+*.exe
+*.msi
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+
+# Memory compaction cache (if any)
+.lcm-cache/
