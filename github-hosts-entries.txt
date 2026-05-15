@@ -1,0 +1,8 @@
+# GitHub DNS fix - 2026-05-15
+20.205.243.166 github.com
+20.205.243.166 www.github.com
+159.106.121.75 github.global.ssl.fastly.net
+185.199.108.153 assets-cdn.github.com
+185.199.109.153 assets-cdn.github.com
+185.199.110.153 assets-cdn.github.com
+185.199.111.153 assets-cdn.github.com
