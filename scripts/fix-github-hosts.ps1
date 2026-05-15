@@ -1,9 +1,9 @@
+# Fix GitHub DNS - 改 hosts 文件
 $hostsPath = "$env:SystemRoot\System32\drivers\etc\hosts"
-$current = Get-Content $hostsPath -Raw
 
 $entries = @"
 
-# GitHub DNS fix - added $(Get-Date -Format 'yyyy-MM-dd HH:mm')
+# GitHub DNS fix
 20.205.243.166 github.com
 20.205.243.166 www.github.com
 159.106.121.75 github.global.ssl.fastly.net
@@ -13,16 +13,12 @@ $entries = @"
 185.199.111.153 assets-cdn.github.com
 "@
 
-if ($current -notmatch "github\.com") {
-    Add-Content -Path $hostsPath -Value $entries -Encoding ASCII
-    Write-Host "[OK] Hosts updated with GitHub DNS entries"
-} else {
-    Write-Host "[SKIP] GitHub entries already exist"
-}
+Add-Content -Path $hostsPath -Value $entries -Encoding ASCII
+Write-Host "Hosts 已更新！" -ForegroundColor Green
 
 ipconfig /flushdns | Out-Null
-Write-Host "[OK] DNS cache flushed"
+Write-Host "DNS 缓存已刷新！" -ForegroundColor Green
 
 Write-Host ""
-Write-Host "You can now access github.com. Press any key to close..."
+Write-Host "按任意键关闭..." -ForegroundColor Yellow
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

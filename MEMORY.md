@@ -14,9 +14,13 @@
 
 ### 三、Git 自动提交
 - 工作区内容一更新就提交推送
-- 路径: ~/.openclaw/workspace
-- 仓库分支: origin main
+- 路径: C:\Users\admin\.qclaw\workspace-agent-113ca7a4
+- 主仓库: Gitee（默认 push）https://gitee.com/tangyoubing/openclaw-agent-mazai
+- 备用仓库: GitHub https://github.com/tangyoubing/openclaw-agent-mazai
+- 仓库分支: master
 - Git 配置: user.name="龙虾名" user.email="bot@openclaw.local"
+- Gitee token: 已配置于 remote URL（私人令牌）
+- GitHub: 命令行访问不稳定（GFW），优先用 Gitee
 
 ### 四、必备工具拉满
 - 推荐启用: web_search, web_fetch, message, sessions_send, exec
@@ -119,6 +123,26 @@ Periodically (every few days), use a heartbeat to:
 - 用户未来计划做电商，方向为藤铁工艺产品
 - 多Agent群聊平台选定飞书(Feishu)，采用WebSocket模式，无需公网IP/域名
 - 码仔(技术部部长)、作家(文案部部长)、贾维斯(CEO/统筹协作)
+
+## 基础设施（2026-05-15 更新）
+
+### 代码仓库
+- **Gitee（主）**：https://gitee.com/tangyoubing/openclaw-agent-mazai（私有）
+- **GitHub（备）**：https://github.com/tangyoubing/openclaw-agent-mazai（公开）
+- 自动 push 默认走 Gitee，GitHub 网络不稳定时自动切
+- Gitee token：9b40d15606833a554171cffcaa0eabc3（已配在 remote URL）
+
+### Edge CDP 操控
+- Edge 启动参数：`--remote-debugging-port=9222`
+- CDP 端点：`http://localhost:9222/json`
+- 操控脚本：`scripts/github-*.cjs` + `scripts/gitee-*.cjs`
+- 依赖：`ws` npm 包
+- 能力：连接标签页 → 执行 JS → 填表 → 点击 → 获取结果
+
+### GitHub 网络
+- DNS hosts 已修复（C:\Windows\System32\drivers\etc\hosts）
+- TCP 443/22 仍可能被墙 RST，命令行访问不稳定
+- 除紧急情况外，优先用 Gitee
 
 ## 十一、每日汇报机制
 
