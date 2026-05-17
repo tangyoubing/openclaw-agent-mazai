@@ -272,3 +272,20 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+---
+
+## 📚 Shared Skills（共享技能库）
+
+**位置**：shared-skills/ 目录（符号链接 → F:\AI\Qclaw\shared-skills\）
+
+**任务涉及以下主题时，先读取对应文件再执行**：
+
+| 文件 | 内容 |
+|------|------|
+| shared-skills/matlab.md | MATLAB 基础操作 + 图像处理速查 |
+| shared-skills/jianying.md | 剪映视频剪辑（快捷键/调色/蒙版/智能功能） |
+| shared-skills/ai-platforms.md | 豆包/即梦/扣子/飞书 使用技巧 |
+| shared-skills/python-api.md | Python + requests API 调用 |
+| shared-skills/mystery-novel.md | 悬疑小说作家谱系 + 写作技巧 |
+| shared-skills/tts.md | OpenClaw TTS 语音功能 |

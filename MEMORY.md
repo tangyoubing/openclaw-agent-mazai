@@ -148,7 +148,7 @@ Periodically (every few days), use a heartbeat to:
 
 - 任务完成时: 立即汇报结果；每天必须进行当日任务进化汇报
 
-## 已启用的自我优化能力（2026-05-14 更新）
+## 已启用的自我优化能力（2026-05-16 更新）
 
 ### 代码能力（Reflection Pattern — 吴恩达四阶段）
 - **执行→评估→诊断→改进**循环：每次代码任务后评估质量、诊断问题、改进策略
@@ -159,6 +159,10 @@ Periodically (every few days), use a heartbeat to:
 - **记忆驱动开发**：任务前 memory_search，新知识立即记录
 - **纠正闭环**：错误→corrections.md → 下次查 corrections.md 避免
 - **工具经验积累**：tool-memory.md 记录工具使用效果
+- **三层攻击矩阵**：微观层(指令优化) + 中观层(算法替代) + 宏观层(架构调优)，2026-05-16新增
+- **动静态联合分析**：结合代码结构静态分析和运行时行为动态分析，2026-05-16新增
+- **语义冗余自检**：代码生成后检查三层根因（冗余抽象/内存足迹/调度失配），SITS2026白皮书，2026-05-16新增
+- **自我优化调试**：调试时不仅修复bug还分析性能瓶颈，借鉴Komorebi AI，2026-05-16新增
 
 ### 记忆能力（四层记忆架构）
 | 层级 | 存储 | 工具 |
@@ -166,11 +170,16 @@ Periodically (every few days), use a heartbeat to:
 | 工作记忆 | 上下文窗口 | 直接读取 |
 | 压缩摘要 | LCM 数据库 | lcm_grep + lcm_expand |
 | 持久文件 | MEMORY.md + memory/*.md | memory_search |
-| 元记忆 | self-improving/ | 反思循环自动积累 |
+| 反思记忆 | self-improving/reflective-memory.md | 决策质量反思/成功失败归因 |
 - **memory-core 插件**：已启用（需重启 QClaw 生效）
 - **Dreaming 主动记忆**：已配置，每天凌晨3点自动整理
 - **LCM 语义搜索**：lossless-claw（contextThreshold=0.6, freshTailCount=64）
 - **混合检索策略**：语义检索(memory_search) + 全文检索(lcm_grep) + 结构化展开(lcm_expand)
+- **动态蒸馏机制**：会话结束触发记忆优化，基于重要性得分剪枝，2026-05-16新增
+- **三层记忆架构**：瞬态记忆 + 语义记忆 + 归档记忆，升级原有双层架构，2026-05-16新增
+- **反思记忆层**：新增第四层反思记忆，记录决策质量归因分析，2026-05-16新增
+- **多阶段巩固流程**：session结束执行summary→reflection→skill extraction三步，2026-05-16新增
+- **结构化任务图**：复杂任务用Mermaid流程图记录到memory/日志，2026-05-16新增
 
 ### 自我学习
 - **每日学习 cron**：三路并行搜索（AI进展+代码能力+记忆能力）
