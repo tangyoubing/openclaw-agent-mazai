@@ -283,9 +283,24 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 | 文件 | 内容 |
 |------|------|
-| shared-skills/matlab.md | MATLAB 基础操作 + 图像处理速查 |
-| shared-skills/jianying.md | 剪映视频剪辑（快捷键/调色/蒙版/智能功能） |
 | shared-skills/ai-platforms.md | 豆包/即梦/扣子/飞书 使用技巧 |
-| shared-skills/python-api.md | Python + requests API 调用 |
+| shared-skills/browser-automation.md | 浏览器自动化操控（CDP） |
+| shared-skills/cloud-storage.md | 云存储备份（百度网盘/微云） |
+| shared-skills/coding-best-practices.md | 编码最佳实践 + 调试技巧 |
+| shared-skills/cron-scheduler.md | 定时任务配置与管理 |
+| shared-skills/docx.md | Word 文档创建与编辑 |
+| shared-skills/email.md | 邮件收发（IMAP/SMTP） |
+| shared-skills/file-operations.md | 文件读写与操作 |
+| shared-skills/frontend-design.md | 前端页面设计 |
+| shared-skills/git.md | Git 版本控制 |
+| shared-skills/jianying.md | 剪映视频剪辑（快捷键/调色/蒙版/智能功能） |
+| shared-skills/matlab.md | MATLAB 基础操作 + 图像处理速查 |
 | shared-skills/mystery-novel.md | 悬疑小说作家谱系 + 写作技巧 |
+| shared-skills/note-taking.md | 多平台笔记（有道/Notion/飞书/IMA） |
+| shared-skills/online-search.md | 网络搜索与信息获取 |
+| shared-skills/pdf.md | PDF 读取与创建 |
+| shared-skills/pptx.md | PPT 创建与编辑 |
+| shared-skills/python-api.md | Python + requests API 调用 |
+| shared-skills/self-improving.md | 自我优化（记忆/代码/搜索） |
 | shared-skills/tts.md | OpenClaw TTS 语音功能 |
+| shared-skills/xlsx.md | Excel 表格操作 |
